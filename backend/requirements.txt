@@ -1,0 +1,51 @@
+# FinTrack Backend — requirements.txt
+
+# Core Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-dotenv>=1.0.0
+pydantic[email]>=2.6.0
+pydantic-settings>=2.2.0
+
+# MongoDB (Async)
+motor>=3.3.0
+pymongo>=4.6.0
+
+# Auth
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+python-multipart>=0.0.9
+
+# Redis
+redis>=5.0.0
+aioredis>=2.0.1
+
+# Rate Limiting
+fastapi-limiter>=0.1.6
+
+# ML Engine
+scikit-learn>=1.4.0
+pandas>=2.1.0
+numpy>=1.26.0
+statsmodels>=0.14.0
+scipy>=1.12.0
+joblib>=1.3.0
+pymannkendall>=1.4.3
+
+# Prophet (time-series forecasting)
+prophet>=1.1.5
+
+# LLM
+groq>=0.9.0
+
+# Background scheduling
+apscheduler>=3.10.0
+
+# PDF generation
+weasyprint>=62.0
+
+# HTTP client (for FX / Crypto APIs)
+httpx>=0.27.0
+
+# CORS
+starlette>=0.37.0
