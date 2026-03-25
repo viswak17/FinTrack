@@ -6,7 +6,9 @@
  */
 import axios from 'axios';
 
-const BASE_URL = '/api/v1';
+const BASE_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api/v1`
+  : '/api/v1';
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -56,10 +58,10 @@ api.interceptors.response.use(
 
       try {
         const { data } = await axios.post(
-  `${BASE_URL}/auth/refresh`,
-  { refresh_token: localStorage.getItem('refresh_token') || '' },
-  { withCredentials: true }
-);
+          `${BASE_URL}/auth/refresh`,
+          { refresh_token: localStorage.getItem('refresh_token') || '' },
+          { withCredentials: true }
+        );
         const newToken = data.access_token;
         localStorage.setItem('access_token', newToken);
         processQueue(null, newToken);
