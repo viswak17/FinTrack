@@ -42,7 +42,7 @@ class Settings(BaseSettings):
     CACHE_TTL_ML_MODEL: int = 86400      # 24 hours
 
     # CORS
-    CORS_ORIGINS: list[str] = ["http://localhost:5173", "http://localhost:3000", "https://fintrack-app.onrender.com"]
+    CORS_ORIGINS: list[str] = ["http://localhost:5173", "http://localhost:3000", "https://fintrack-ec5s.onrender.com"]
 
     # ML
     ML_MIN_SAMPLES_CATEGORIZER: int = 20
